@@ -1,0 +1,57 @@
+# HOW JS CODE IS PARSED AND COMPILED ?
+
+-> JS code remains the same, but how that code is handled depends on the browser or the engine used 
+
+-> PARSING : reading or loading of code
+
+-> EXECUTION : actual working of code
+
+..., to perform these 2 functions, every browser has an engine : Chrome's Engine(V8)
+
+--> this Engine consists of 2 parts : Interpreter and Compiler
+
+=> INTERPRETER -> parses script and starts execution line by line -> converts it to the byte code -> and then loads the code to compiler
+
+=> COMPILER -> translation of interpreted code to the machine code -> JiT
+
+Just In Time compilation : compiler starts compiling + executing the compiled code whilst the code is being read.
+
+(whilst -> at the same time as / whereas)
+
+--> then this compiled code is passed to the Computer 
+
+-> then various optimzation techniques are used on that code
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

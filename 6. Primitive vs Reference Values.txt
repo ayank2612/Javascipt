@@ -1,0 +1,83 @@
+# PRIMITIVE VS REFERENCE VALUES :
+
+1. Primitive Values : strings, numbers, Booleans, null, undefined, symbol
+
+-> stored in stack (as they are short term memories)
+
+-> HERE IT IS COPIED BY VALUE -> change in value in one variable will not affect the value of other variable
+
+-> variable really stores the value in itself
+
+EXAMPLE :
+
+let name = "ayank" //name = ayank
+
+let otherName = name // otherName = ayank
+
+name = shivi // name = shivi, otherName = ayank
+
+otherName // otherName = ayank
+
+--------------------------------------------------------------------------
+
+2. Reference Values : all the objects (more expensive to create)
+
+-> stored in Heap
+
+-> variable stores the pointer (address) to location in memory
+
+-> SO IF I COPY THE VARIABLE -> it copies the address of the variable
+
+-> change at one place will also change the value at the other place -> as the changes are made at the same memory address
+
+*********************************************************
+
+# EXAMPLES :
+
+1. comparing the reference variables with same values :
+
+let person1 = {age : 30}
+
+let person2 = {age : 30}
+
+person1 === person2 --> false --> although the values are same, but it is the reference value, so both store the different memory addresses -> therefore, it will compare the addresses -> HENCE FALSE
+
+*********************************************************
+
+2. changing the const values ? --> (arrays are objects)
+
+const hobbies = ["sports"]
+
+hobbies.push("music") --> THIS WILL NOT GIVE AN ERROR ✔️
+
+..., as hobbies just stores the address which is not changing -> only the value that is stored at that address is getting changed
+
+..., but if I try to do this :
+
+hobbies = ["sports", "running"] --> IT WILL THROW ERROR ❌
+
+..., because now we are creating the new array with new address
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,40 @@
+# How the code gets executed ?
+
+-> its all about managing memory + managing memory steps
+
+-> here we have 2 important concepts :
+
+1. HEAP : it is our long term memory -> browser taps into our system memory and manages the heap to store the stuff
+
+-> the data that we use during the program is stored in the heap
+
+2 STACK : it is short term memory -> it is used for code execution -> manages the functions and all
+
+-> in stack, it always starts with the execution of some anonymous code i.e. the script file
+
+==> WHOLE WORKFLOW IN NOTEBOOK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

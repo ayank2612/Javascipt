@@ -1,0 +1,74 @@
+# ES5 AND ES6 : ES stands for ECMA Script
+
+-> the main feature that ES6 came up with was that it introduced let and const
+
+-> earlier only var was the keyword used to store variables
+
+-> let and const --> BLOCK SCOPE
+
+-> var --> FUNCTIONAL AND GLOBAL SCOPE
+
+=> LETS UNDERSTAND THIS WITH THE HELP OF AN EXAMPLE :
+
+let name = "ayank"
+
+if(name === "ayank"){
+  var hobbies = ["playing", "music"]
+  console.log(hobbies)
+}
+
+console.log(name, hobbies)
+
+..., in this case output will be :
+
+[ 'playing', 'music' ]
+ayank [ 'playing', 'music' ]
+
+--> this tells us that, var keyword is accessible anywhere if it is declared anywhere except inside functions -> as a GLOBAL variable
+  
+..., if I make the variable inside the if statement as let :
+
+if(name === "ayank"){
+  let hobbies = ["playing", "music"]
+  console.log(hobbies)
+}
+
+-> then is will throw an error as : hobbies is not defined --> AS LET IS BLOCK SCOPED 
+
+------------------------------------------------------------------------------
+
+=> ALSO var can be re-declared and re-initialized :
+
+let name = "ayank"
+let name = "shivi" --> NOT ALLOWED ❌
+
+var name = "ayank"
+var name = "shivi" --> ALLOWED ✔️
+
+------------------------------------------------------------------------------
+
+# NOTE : PREFERRED NOT TO USE VAR -> ONLY USE LET AND CONST
+
+Ques. Then why var is still there ?
+
+-> because browsers still support it, although we do not prefer to use it now
+
+--> var is only different in terms of scope
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

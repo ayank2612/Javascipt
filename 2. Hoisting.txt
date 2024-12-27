@@ -1,0 +1,144 @@
+# HOISITNG : is a term used to explain the behavior of variable declarations 
+
+
+-> only the declaration is hoisted --> initialization remains where it is
+
+-> declaration is not actually  moved -> JS engine parses the declarations during compilation and becomes aware of vars and their scopes
+
+------------------------------------------------------------------------
+
+-> technically, it only works for VAR :
+
+1. HOISTING OF VAR -> Example :
+
+console.log(user)
+var user = "ayank"
+console.log(user)
+
+..., it will give me the output as :
+
+undefined
+ayank
+
+..., this code can be visualized as :
+
+var user
+console.log(user)
+user = "ayank"
+console.log(user)
+
+------------------------------------------------------------------------
+
+2. HOISTING OF LET, CONST AND CLASS :
+
+-> Variables declared via let, const and class are also hoisted -> BUT UNLIKE VAR : they are not initialzed and accessing them before the declaration results in ReferenceError.
+
+console.log(user) // ReferenceError❌
+let user = "ayank"
+
+------------------------------------------------------------------------
+
+3. HOISTING OF FUNCTION EXPRESSIONS : they are written in the form of variable declarations
+
+-> Since they are also declared using var -> only the declarations is hoisted
+
+console.log(bar)
+bar();
+
+var bar = function(){
+  console.log("hello")
+}
+
+..., output : it will give undefined for 1st console as var is hoisted
+
+undefined
+
+ERROR : bar is not a function 
+
+------------------------------------------------------------------------
+
+# HOISTING OF FUNCTION DECLARATION : unlike function expressions -> they have both declaration and definitions 
+
+-> thus, THEY CAN BE CALLED EVEN BEFORE THEY ARE DECLARED
+
+console.log(bar)
+bar();
+
+function bar(){
+  console.log("hello")
+}
+
+..., output :
+
+[Function: bar]
+hello
+
+------------------------------------------------------------------------
+
+# HOISTING OF IMPORTS :
+
+-> import statements are hoisted
+
+-> imports are available in entire module scope
+
+foo-doSomething();
+
+import foo from "./module/foo"
+
+-> it will work normally
+
+------------------------------------------------------------------------
+
+# UNDER THE HOOD : in short ->
+
+-> JS creates all variables in the current scope even before the code is executed.
+
+-> variables created using var will have the value as "undefined"
+
+-> vars created with let and const will have value -> <value unavailable> -> that is why we get the ReferenceError
+
+------------------------------------------------------------------------
+
+# MODERN PRACTICES :
+
+1. avoid use of var -> use let and const
+
+2. it is recommended to declare and initialize vars and import statements at the top of containing scope to eliminate the overhead of tracking when a varible can be used.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+-> As we know that we can also declare a variable in JS without using any keyword also
+
+user = "ayank"
+
+-> this automatically makes it a var variable
+
+-> although we should declare vars like this
+
+=> TO ELIMINATE THESE BEHAVIOURS WE CAN USE STRICT MODE
+
+..., to enable this mode on the script : "use strict"; -> in the beginning of the page
+
+-> if I write : var undefined = 5; -> IT WORKS ✔️
+
+-> but, this is a pre-defined keyword -> using strict mode -> it will not allow it ❌
